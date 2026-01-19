@@ -1,17 +1,11 @@
 public class BonusMilesService {
 
-    public int calculate(double TicketCost) {
-        int mile;
-        if (TicketCost == (int) TicketCost) {
-            mile = (int) Math.round(TicketCost) / 20;
-        } else {
-            mile = (int) TicketCost / 20;
-        }
+    public int calculate(double ticketCost) {
         int miles;
-        if (TicketCost > 20) {
-            miles = (int) (TicketCost / 20);
+        if (ticketCost >= 20) {
+            miles = (int) Math.round(ticketCost) / 20;
         } else {
-            miles = (int) TicketCost;
+            miles = (int) ticketCost;
         }
 
         return miles;
